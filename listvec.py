@@ -41,8 +41,8 @@ class ListVec(list):
 
         assert len(self.e) == len(b.e)
         num = self.dot(b)
-        f_den = b.dot(b)**1/2
-        s_den = self.dot(self)**1/2
+        f_den = b.dot(b)**(1/2)
+        s_den = self.dot(self)**(1/2)
         return num/(f_den*s_den)
 
     def __str__(self):
