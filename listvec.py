@@ -39,14 +39,11 @@ class ListVec(list):
 
     def similarity(self, b):
 
-        assert len(self) == len(b)
-        for i in range(len(self.e)):
-            if self.e[i] == b.e[i]:
-                pass
-            else:
-                return False
-
-        return True
+        assert len(self.e) == len(b.e)
+        num = self.dot(b)
+        f_den = b.dot(b)**1/2
+        s_den = self.dot(self)**1/2
+        return num/(f_den*s_den)
 
     def __str__(self):
         return str(self.e)
