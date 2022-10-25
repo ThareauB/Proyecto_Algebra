@@ -1,6 +1,5 @@
 from vec import Vec
 from listvec import ListVec
 
-v = ListVec([1, 2, 3, 4, 5])
-u = ListVec([0, 1, 0, 0, 0])
-print(v.similarity(u))
+a = Vec({'a', 'e', 'i', 'o', 'u'}, {'a': 0, 'e': 1, 'i': 2})
+print(a)
